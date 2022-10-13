@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/ptsans-700.woff2") format ("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -88,8 +88,8 @@ a.undecorated-link {
 .advantages-description-blue {
   color: #FFFFFF;
   background-color: #82B3D3;
-  font-size: 18;
-  line-height: 21;
+  font-size: 18px;
+  line-height: 21px;
   text-align: center;
 }
 
@@ -105,8 +105,8 @@ a.undecorated-link {
 .advantages-description {
   color: #000000;
   background-color: #FFFFFF;
-  font-size: 18;
-  line-height: 21;
+  font-size: 18px;
+  line-height: 21px;
   text-align: center;
 }
 
