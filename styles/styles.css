@@ -56,18 +56,30 @@ a.undecorated-link {
 .navigation-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 339px;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .navigation-user {
   display: flex;
+  justify-content: space-between;
   max-width: 268px;
   margin-left: auto;
 }
 
+.navigation-user .navigation-link {
+  display: block;
+  min-width: 44px;
+  min-height: 64px;
+  padding: 22px 12px;
+}
+
 .navigation-link {
+  display: block;
+  padding: 20px 16px;
   font-family: "PT Sans", sans-serif;
   line-height: 24px;
   font-weight: 700;
@@ -80,6 +92,7 @@ a.undecorated-link {
 
 .main-container{
   flex-grow: 1;
+  padding-top: 51px;
 }
 
 .main-index {
@@ -99,13 +112,12 @@ a.undecorated-link {
   display: block;
   width: 458px;
   margin: 0 auto;
+  margin-bottom: 82px;
 }
 
 
 .description-first{
-  margin: 0;
-  padding: 0;
-  width: 1200px;
+  margin-top: 0;
   height: 282px;
   margin-top: 485px;
 }
@@ -124,17 +136,19 @@ a.undecorated-link {
 }
 
 .description-small {
-  margin: 0;
-  padding: 0;
   width: 651px;
   margin: 0 auto;
   margin-top: 25px;
+  margin-bottom: 90px;
   color: #000000;
   background-color: #FFFFFF;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+}
 
+.advantages {
+  margin: 0;
 }
 
 .advantages-list-first{
@@ -195,6 +209,11 @@ padding: 0;
 .advantages-list-second{
   margin: 0;
   padding: 0;
+}
+
+
+.light{
+  background-color: #F0F6F9;
 }
 
 .advantages-white{
@@ -262,6 +281,49 @@ padding: 0;
   text-align: center;
 }
 
+.offer{
+
+ height: 406px;
+ display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description-main .last{
+  margin: 0;
+
+}
+
+.search-hotel{
+  width: 376px;
+  padding: 8px 50px;
+  background-color: #756157;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #FFFFFF;
+  margin-bottom: 96px;
+}
+
+.sign-up{
+  padding-top: 96px;
+  padding-bottom: 104px;
+}
+
+
+.sign-up-block{
+  width: 684px;
+  height: 215px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+
+}
 .page-footer {
   background-color: #FFFFFF;
   display: flex;
@@ -274,12 +336,20 @@ padding: 0;
 
 .footer-social-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   width: 142px;
   height: 40px;
   color: #000000;
   text-decoration: none;
+  list-style-type: none;
+}
+
+.footer-social-item{
+  width: 47px;
+  height: 40px;
+
 }
 
 .number {
@@ -293,6 +363,8 @@ padding: 0;
 .page-footer-container{
   width: 1060px;
   height: 50px;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .html-academy-img {
