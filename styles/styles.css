@@ -99,8 +99,10 @@ a.undecorated-link {
   color: #000000;
   background-color: #FFFFFF;
   background-image: url(/images/index_background.jpg);
-  background-size: 100% auto;
+  background-size: auto;
   background-repeat: no-repeat;
+  margin-left: auto;
+    margin-right: auto;
 }
 
 .page-container{
@@ -117,9 +119,9 @@ a.undecorated-link {
 
 
 .description-first{
-  margin-top: 0;
+  margin-bottom: 0;
   height: 282px;
-  margin-top: 485px;
+  margin-top: 69px;
 }
 
 .description-main {
@@ -258,9 +260,10 @@ padding: 0;
 
 .sign-up {
   background-image: url(/images/background.png);
-  background-size: 100% auto;
+  background-size: auto;
   background-repeat: no-repeat;
   height: 414.86px;
+
 }
 
 .description-white {
