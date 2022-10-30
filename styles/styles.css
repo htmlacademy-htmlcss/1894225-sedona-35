@@ -64,10 +64,12 @@ a.undecorated-link {
 }
 
 .navigation-user {
+  margin: 0;
   display: flex;
   justify-content: space-between;
   max-width: 268px;
   margin-left: auto;
+  list-style-type: none;
 }
 
 .navigation-user .navigation-link {
@@ -117,7 +119,6 @@ a.undecorated-link {
   margin-bottom: 82px;
 }
 
-
 .description-first{
   margin-bottom: 0;
   height: 282px;
@@ -149,10 +150,6 @@ a.undecorated-link {
   text-align: center;
 }
 
-.advantages {
-  margin: 0;
-}
-
 .advantages-list-first{
 margin: 0;
 padding: 0;
@@ -171,12 +168,11 @@ padding: 0;
 }
 
 .advantages-item{
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: auto auto auto;
   margin: 0;
   padding: 0;
 }
-
 
 .advantages-title-blue {
   margin: 0;
@@ -213,11 +209,6 @@ padding: 0;
   padding: 0;
 }
 
-
-.light{
-  background-color: #F0F6F9;
-}
-
 .advantages-white{
   height: 384px;
   text-align: center;
@@ -226,6 +217,9 @@ padding: 0;
   justify-content: center;
 }
 
+.light-blue{
+  background-color: rgba(131, 179, 211, 0.2);
+}
 .advantages-item-list{
   height: 384px;
   display:flex;
@@ -233,10 +227,8 @@ padding: 0;
   justify-content: center;
 }
 
-
 .advantages-title {
   color: #000000;
-  background-color: #FFFFFF;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
@@ -248,7 +240,6 @@ padding: 0;
   margin: 0 auto;
   width: 230px;
   color: #000000;
-  background-color: #FFFFFF;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -282,11 +273,13 @@ padding: 0;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 54px;
 }
 
 .offer{
-
- height: 406px;
+padding-top: 96px;
+padding-bottom: 96px;
  display:flex;
   flex-direction: column;
   justify-content: center;
@@ -295,6 +288,11 @@ padding: 0;
 .description-main .last{
   margin: 0;
 
+}
+
+.description-small.end{
+  margin-top: 20px;
+  margin-bottom: 54px;
 }
 
 .search-hotel{
@@ -309,14 +307,12 @@ padding: 0;
   flex-direction: column;
   justify-content: center;
   color: #FFFFFF;
-  margin-bottom: 96px;
 }
 
 .sign-up{
   padding-top: 96px;
   padding-bottom: 104px;
 }
-
 
 .sign-up-block{
   width: 684px;
@@ -325,8 +321,24 @@ padding: 0;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-
 }
+
+.newsletter-form{
+  width: 684px;
+  height: 52px;
+  display: grid;
+  grid-template-columns: 452px auto;
+  grid-template-areas: text button;
+}
+
+.field{
+  grid-area: text;
+}
+
+.newsletter-button{
+  grid-area: button;
+}
+
 .page-footer {
   background-color: #FFFFFF;
   display: flex;
@@ -334,8 +346,6 @@ padding: 0;
   height: 120px;
   margin: 0 auto;
 }
-
-
 
 .footer-social-list {
   display: flex;
