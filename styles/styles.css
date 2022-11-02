@@ -64,6 +64,16 @@ a.undecorated-link {
   list-style-type: none;
 }
 
+.navigation-link-current::before {
+  position: absolute;
+  height: 2px;
+  width: 68px;
+  background-color: #756257;
+  bottom: 867px;
+  left: 432px;
+  content: "";
+}
+
 .navigation-user {
   margin: 0;
   display: flex;
@@ -89,11 +99,15 @@ a.undecorated-link {
   width: max-content;
   height: 100%;
   padding: 8px 34px;
+  border-radius: 4px;
 }
 
 .navigation-user .want a{
-  background-color: #756157;
   color: #FFFFFF;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
   width: max-content;
   height: 100%;
   text-decoration: none;
@@ -110,6 +124,19 @@ a.undecorated-link {
   color: inherit;
   background-color: #FFFFFF;
   text-decoration: none;
+}
+
+.navigation-user .navigation-item:nth-child(1){
+  background-image: url(/images/search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation-user .navigation-item:nth-child(2){
+  background-image: url(/images/likes.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 20px;
 }
 
 .main-container{
@@ -135,7 +162,6 @@ a.undecorated-link {
 .welcome {
   width: 458px;
   margin: 0 auto 151px auto;
-
 }
 
 .description-first{
@@ -205,6 +231,17 @@ padding: 0;
   text-transform: uppercase;
 }
 
+.advantages-title-blue::before{
+  position: absolute;
+  bottom: -95px;
+  left: 50%%;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  content: "";
+  margin-left: 40px;
+}
+
 .advantages-description-blue {
   color: #FFFFFF;
   background-color: #82B3D3;
@@ -240,6 +277,7 @@ padding: 0;
 .light-blue{
   background-color: rgba(131, 179, 211, 0.2);
 }
+
 .advantages-item-list{
   height: 384px;
   display:flex;
@@ -322,12 +360,14 @@ justify-content: center;
   background-color: #756157;
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   display:flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+  border-radius: 4px;
 }
 
 .sign-up-block{
@@ -342,9 +382,7 @@ justify-content: center;
 .newsletter-form{
   width: 684px;
   height: 52px;
-  display: grid;
-  grid-template-columns: 452px auto;
-  grid-template-areas: text button;
+  display: flex;
 }
 
 .field{
@@ -353,6 +391,15 @@ justify-content: center;
 
 .newsletter-button{
   grid-area: button;
+  width: 232px;
+  height: 52px;
+  background-color: #82B3D3;
+  border: 0px;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+font-weight: 700;
 }
 
 .page-footer {
@@ -373,12 +420,28 @@ justify-content: center;
   color: #000000;
   text-decoration: none;
   list-style-type: none;
+  margin: 0;
 }
 
 .footer-social-item{
   width: 47px;
   height: 40px;
+}
 
+.footer-social-link{
+  display: block;
+  height: 40px;
+  width: 47;
+  padding: 13px 11px;
+  fill: #83B3D3;
+}
+
+.icon-vk:hover{
+  fill:#68A2CA;
+}
+
+.icon-vk:active{
+  fill:rgba(104, 162, 202, 0.3);
 }
 
 .number {
@@ -387,6 +450,14 @@ justify-content: center;
   line-height: 40px;
   text-align: center;
   margin: 0 auto;
+}
+
+.number:hover{
+  color: #756157;
+}
+
+.number:active{
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .page-footer-container{
@@ -399,4 +470,25 @@ justify-content: center;
 
 .html-academy-img {
   text-align: right;
+}
+
+.logo-html-academy:hover{
+  background-color: #756157;;
+}
+
+.logo-html-academy:active{
+  background-color: rgba(117, 97, 87, 0.3);
+}
+
+.button:hover {
+  background-color: #615048;
+}
+
+.button:focus{
+  background-color:#615048
+}
+
+.button:active{
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
 }
