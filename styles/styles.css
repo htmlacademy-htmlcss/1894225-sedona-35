@@ -234,8 +234,8 @@ padding: 0;
 .advantages-title-blue::before{
   position: absolute;
   bottom: -95px;
-  left: 50%%;
-  width: 60px;
+
+  width: 47px;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.3);
   content: "";
@@ -436,12 +436,14 @@ font-weight: 700;
   fill: #83B3D3;
 }
 
-.icon-vk:hover{
-  fill:#68A2CA;
+.footer-social-link > svg path:hover {
+  fill: #68A2CA;
 }
 
-.icon-vk:active{
-  fill:rgba(104, 162, 202, 0.3);
+
+
+.footer-social-link > svg path:active {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .number {
@@ -470,6 +472,10 @@ font-weight: 700;
 
 .html-academy-img {
   text-align: right;
+}
+
+.html-academy-img > svg path:hover {
+  fill: #756157;
 }
 
 .logo-html-academy:hover{
