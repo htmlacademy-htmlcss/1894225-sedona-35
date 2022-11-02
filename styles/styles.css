@@ -32,6 +32,8 @@ body {
 
 .visually-hidden{
   visibility: hidden;
+  margin:0;
+  height:0;
 }
 
 a.undecorated-link {
@@ -49,7 +51,6 @@ a.undecorated-link {
   justify-content: space-around;
   align-items: center;
   width: 1060px;
-  height: 64px;
   margin: 0 auto;
 }
 
@@ -58,9 +59,19 @@ a.undecorated-link {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 339px;
-  margin: 0;
+  margin: 0 230px 0 0 ;
   padding: 0;
   list-style-type: none;
+}
+
+.navigation-link-current::before {
+  position: absolute;
+  height: 2px;
+  width: 68px;
+  background-color: #756257;
+  bottom: 867px;
+  left: 432px;
+  content: "";
 }
 
 .navigation-user {
@@ -68,18 +79,41 @@ a.undecorated-link {
   display: flex;
   justify-content: space-between;
   max-width: 268px;
-  margin-left: auto;
   list-style-type: none;
+}
+
+.navigation-user li {
+  display: inline-block;
+  justify-content: space-around;
+  align-items: center;
+  width: 44px;
 }
 
 .navigation-user .navigation-link {
   display: block;
   min-width: 44px;
-  min-height: 64px;
-  padding: 22px 12px;
 }
 
-.navigation-link {
+.navigation-user .want{
+  background-color: #756157;
+  width: max-content;
+  height: 100%;
+  padding: 8px 34px;
+  border-radius: 4px;
+}
+
+.navigation-user .want a{
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: max-content;
+  height: 100%;
+  text-decoration: none;
+}
+
+.navigation-list .navigation-link {
   display: block;
   padding: 20px 16px;
   font-family: "PT Sans", sans-serif;
@@ -90,6 +124,19 @@ a.undecorated-link {
   color: inherit;
   background-color: #FFFFFF;
   text-decoration: none;
+}
+
+.navigation-user .navigation-item:nth-child(1){
+  background-image: url(/images/search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation-user .navigation-item:nth-child(2){
+  background-image: url(/images/likes.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 20px;
 }
 
 .main-container{
@@ -113,16 +160,13 @@ a.undecorated-link {
 }
 
 .welcome {
-  display: block;
   width: 458px;
-  margin: 0 auto;
-  margin-bottom: 82px;
+  margin: 0 auto 151px auto;
 }
 
 .description-first{
   margin-bottom: 0;
-  height: 282px;
-  margin-top: 69px;
+  margin-top: 0;
 }
 
 .description-main {
@@ -136,6 +180,7 @@ a.undecorated-link {
   text-transform: uppercase;
   width: 620px;
   margin: 0 auto;
+  margin-top: 69px;
 }
 
 .description-small {
@@ -186,6 +231,17 @@ padding: 0;
   text-transform: uppercase;
 }
 
+.advantages-title-blue::before{
+  position: absolute;
+  bottom: -95px;
+
+  width: 47px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  content: "";
+  margin-left: 40px;
+}
+
 .advantages-description-blue {
   color: #FFFFFF;
   background-color: #82B3D3;
@@ -194,6 +250,7 @@ padding: 0;
   margin: 0 auto;
   width: 230px;
   text-align: center;
+  margin-top: 62px;
 }
 
 .advantages-item-2{
@@ -220,6 +277,7 @@ padding: 0;
 .light-blue{
   background-color: rgba(131, 179, 211, 0.2);
 }
+
 .advantages-item-list{
   height: 384px;
   display:flex;
@@ -243,18 +301,20 @@ padding: 0;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+  margin-top: 62px;
 }
 
-.search-hotel {
- margin: 0 auto;
+.advantages-description.last{
+  margin-top: 30px;
 }
 
 .sign-up {
   background-image: url(/images/background.png);
   background-size: auto;
   background-repeat: no-repeat;
-  height: 414.86px;
-
+  height: max-content;
+  padding-top: 96px;
+  padding-bottom: 104px;
 }
 
 .description-white {
@@ -278,16 +338,14 @@ padding: 0;
 }
 
 .offer{
-padding-top: 96px;
 padding-bottom: 96px;
- display:flex;
-  flex-direction: column;
-  justify-content: center;
+display:flex;
+flex-direction: column;
+justify-content: center;
 }
 
-.description-main .last{
-  margin: 0;
-
+.description-main.last{
+  margin-left: auto;
 }
 
 .description-small.end{
@@ -295,23 +353,21 @@ padding-bottom: 96px;
   margin-bottom: 54px;
 }
 
-.search-hotel{
+.undecorated-link.search-hotel{
+  color: #FFFFFF;
   width: 376px;
   padding: 8px 50px;
   background-color: #756157;
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   display:flex;
   flex-direction: column;
   justify-content: center;
-  color: #FFFFFF;
-}
-
-.sign-up{
-  padding-top: 96px;
-  padding-bottom: 104px;
+  margin: 0 auto;
+  border-radius: 4px;
 }
 
 .sign-up-block{
@@ -326,9 +382,7 @@ padding-bottom: 96px;
 .newsletter-form{
   width: 684px;
   height: 52px;
-  display: grid;
-  grid-template-columns: 452px auto;
-  grid-template-areas: text button;
+  display: flex;
 }
 
 .field{
@@ -337,6 +391,15 @@ padding-bottom: 96px;
 
 .newsletter-button{
   grid-area: button;
+  width: 232px;
+  height: 52px;
+  background-color: #82B3D3;
+  border: 0px;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+font-weight: 700;
 }
 
 .page-footer {
@@ -357,12 +420,30 @@ padding-bottom: 96px;
   color: #000000;
   text-decoration: none;
   list-style-type: none;
+  margin: 0;
 }
 
 .footer-social-item{
   width: 47px;
   height: 40px;
+}
 
+.footer-social-link{
+  display: block;
+  height: 40px;
+  width: 47;
+  padding: 13px 11px;
+  fill: #83B3D3;
+}
+
+.footer-social-link > svg path:hover {
+  fill: #68A2CA;
+}
+
+
+
+.footer-social-link > svg path:active {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .number {
@@ -373,7 +454,16 @@ padding-bottom: 96px;
   margin: 0 auto;
 }
 
+.number:hover{
+  color: #756157;
+}
+
+.number:active{
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .page-footer-container{
+  display: flex;
   width: 1060px;
   height: 50px;
   padding-top: 40px;
@@ -382,4 +472,29 @@ padding-bottom: 96px;
 
 .html-academy-img {
   text-align: right;
+}
+
+.html-academy-img > svg path:hover {
+  fill: #756157;
+}
+
+.logo-html-academy:hover{
+  background-color: #756157;;
+}
+
+.logo-html-academy:active{
+  background-color: rgba(117, 97, 87, 0.3);
+}
+
+.button:hover {
+  background-color: #615048;
+}
+
+.button:focus{
+  background-color:#615048
+}
+
+.button:active{
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
 }
