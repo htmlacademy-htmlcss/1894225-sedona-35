@@ -175,30 +175,47 @@
   <section class="modal-content">
     <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
     <form class="auth-form" action="" method="post">
-      <p class="field-group">
-        <label class="come-in" for="date">Дата заезда</label>
-        <input class="auth-form-field first field" type="text" id="date-first" name="date-first" placeholder="27 апреля 2020">
-      </p>
-      <p class="field-red-text">Мы не можем отправить вас в прошлое</p>
-      <p class="field-group">
-        <label class="come-out" for="date">Дата выезда</label>
-        <input class="auth-form-field field" type="text" id="date-second" name="date-second" placeholder="1 сентября 2021">
-      </p>
-      <div class="field-people">
-        <label class="field-label-adult" for="adult">Взрослые</label>
-        <span class="field-box">
-          <button class="field-button minus" type="button"></button>
-          <input class="field-number" id="adult" name="adult" type="number" value="2">
-          <button class="field-button plus" type="button"></button>
-        </span>
+      <div class="field-group">
+          <label class="come-in" for="date">Дата заезда:</label>
+          <div>
+            <input class="auth-form-field field" type="text" id="date-first" name="date-first" placeholder="27 апреля 2020">
+            <p class="field-red-text">Мы не можем отправить вас в прошлое.</p>
+          </div>
       </div>
-      <div class="field-people">
-        <label class="field-label" for="kids">Дети</label>
-        <span class="field-box">
-          <button class="field-button minus" type="button"></button>
-          <input class="field-number" id="kids" name="kids" type="number" value="1">
-          <button class="field-button plus" type="button"></button>
+      <div class="field-group">
+        <label class="come-out" for="date">Дата выезда:</label>
+        <div>
+        <input class="auth-form-field field" type="text" id="date-second" name="date-second" placeholder="1 сентября 2021">
+        <p class="field-black-text">На эти даты есть свободные номера. Пока есть.</p>
+      </div>
+      </div>
+      <div class="field-income">
+        <div class="field-people">
+          <label class="field-label-adult" for="adult">Взрослые:</label>
+          <span class="field-box">
+            <button class="field-button minus" type="button"> </button>
+            <input class="field-number" id="adult" name="adult" type="number" value="2">
+            <button class="field-button plus" type="button"></button>
+          </span>
+        </div>
+        <div class="field-people">
+          <span class="form-label">
+          <label class="field-label" for="kids">Дети:</label>
+        <span class="tooltip">
+          <button class="tooltip-toggle" type="button">
+            <svg class="tooltipe-icon" width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
+              </svg>
+          </button>
+          <span class="tooltip-text" role="tooltip" id="tooltip-label-count">Укажите количество детей,<br> которые будут с вами, возраст которых от 6 до 18 лет. Дети<br> до 6 лет размещаются бесплатно.</span>
         </span>
+        </span>
+          <span class="field-box">
+            <button class="field-button minus" type="button"></button>
+            <input class="field-number" id="kids" name="kids" type="number" value="1">
+            <button class="field-button plus" type="button"></button>
+          </span>
+        </div>
       </div>
       <button class="button-search-hotel"  type="submit">Найти</button>
     </form>

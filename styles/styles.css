@@ -577,7 +577,7 @@ border: 0px;
 }
 
 .modal-auth{
-  width: 717px;
+  width: 577px;
   border-radius: 30px;
 }
 
@@ -608,63 +608,98 @@ border: 0px;
   text-transform: uppercase;
 }
 
-.auth-form{
-  display: grid;
-  grid-template-areas:
-  "come-in  field  field  field"
-  "come-out field  field  field"
-  "adult    field  kids   field"
-  "button   button button button";
-  width: 464px;
-  grid-template-columns: 137px 198px 130px 112px;
-  grid-template-rows: 48px 48px 48px 60px;
-  row-gap: 48px;
+
+.field-group {
+  display: flex;
 }
 
 .come-in{
-  grid-area: come-in;
-  grid-column: 1/2;
-  grid-row: 1/2;
+  flex-shrink: 0;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 12px;
+  margin-right: 24px;
 }
 
 .field-red-text{
-  grid-column: 2/-1;
+  font-size: 16px;
+  font-weight: 400;
+  color: #FF5757;
+  margin: 0;
+  padding-left: 20px;
+  margin-bottom: 23px;
 }
 
-.auth-form-field.field{
-  grid-area: field;
-  grid-column: 2/5;
-  grid-row: 1/2;
+.field-black-text{
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  margin: 0;
+  padding-left: 20px;
+  margin-bottom: 23px;
 }
 
 .come-out{
-  grid-area: come-out;
-  grid-column: 1/2;
+  flex-shrink: 0;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 12px;
+  margin-right: 20px;
 }
 
-.field-label-adult{
-  grid-area: adult;
-  grid-column: 1/2;
-  grid-row: 3/4;
+.auth-form-field{
+  width: 440px;
+  height: 48px;
+  border-radius: 4px;
+  border: 0;
+  background-color: #F2F2F2;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
 }
 
-.field-label-kids{
-  grid-area: kids;
-  grid-column: 3/4;
-  grid-row:4/5;
+.field-income {
+  display: flex;
+  justify-content: space-between;
 }
 
-.field-label{
-
-  grid-column: 1/2;
-  grid-row: 3/4;
+.field-number{
+  width: 110px;
+  height: 48px;
+  border-radius: 4px;
+  border: 0;
+  background-color: #F2F2F2;
+  text-align: center;
+  font-size: 18px;
+  line-height: 20px;
+  line-height: 700;
+position: relative;
 }
 
-.button-search-hotel{
-  grid-area: button;
-  grid-column: 1/-1;
-
+.field-people {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+  font-size: 20px;
+  font-weight: 700;
 }
+
+.button-search-hotel {
+  width: 100%;
+  margin-top: 48px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  background-color: #83B3D3;
+  font-size: 20px;
+  color: #F2F2F2;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: 0;
+}
+
 .field-box{
   order: 2;
   display: grid;
@@ -697,5 +732,56 @@ border: 0px;
   padding: 0;
   border: 0;
   border-radius: 1px;
+}
 
+.tooltip{
+position: absolute;
+width: 26px;
+height: 26px;
+}
+
+.tooltip-toggle{
+  border: none;
+  background-color: #83B3D3;
+border-radius: 50%;
+width: 26px;
+height: 26px;
+margin-left: 10px;
+}
+
+.tooltip-text{
+  background-color: #333333;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  display: block;
+  width: 256px;
+  position: absolute;
+  bottom: -130px;
+  left: -130px;
+  z-index: 1;
+  display: none;
+}
+
+.tooltip-text:after{
+  content: "";
+  background-image: url("/images/arrow.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
