@@ -63,7 +63,8 @@
             </div>
             <img src="images/photo_1.jpg" width="800" height="384" alt="Фото Настоящий городок">
           </li>
-          <div class="advantages-item">
+        </ul>
+        <ul class="advantages-item">
           <li class="advantages-white">
             <h3 class="advantages-title light">Небольшая площадь</h3>
             <p class="advantages-description">Все достопримечательности находятся очень близко</p>
@@ -76,17 +77,18 @@
             <h3 class="advantages-title light">Мало туристов</h3>
             <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
-          </div>
-          <li class="advantages-item">
-            <img src="images/photo_2.jpg" width="800" height="384" alt="Фото Мост Дьявола">
-            <div class="advantages-blue">
+        </ul>
+        <div class="advantages-list-second">
+          <img src="images/photo_2.jpg" width="800" height="384" alt="Фото Мост Дьявола">
+
+          <ul class="advantages-item">
+            <li class="advantages-blue">
               <h3 class="advantages-title-blue">Там есть<br>мост дьявола</h3>
               <p class="advantages-description-blue">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            </div>
           </li>
         </ul>
-        <ul class="advantages-list-second">
-          <div class="advantages-item">
+      </div>
+        <ul class="advantages-item">
           <li class="advantages-white light-blue">
             <h3 class="advantages-title">Жилье</h3>
             <p class="advantages-description last">Рекомендуем пожитьв настоящем мотеле, всё как в кино!</p>
@@ -99,7 +101,6 @@
             <h3 class="advantages-title">Сувениры</h3>
             <p class="advantages-description last">Не только китайского, но и настоящего местного производства!</p>
           </li>
-          </div>
         </ul>
     </section>
 
@@ -174,16 +175,16 @@
     </button>
   <section class="modal-content">
     <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-    <form class="auth-form" action="" method="post">
+    <form class="auth-form" action="https://htmlacademy.ru/" method="post">
       <div class="field-group">
-          <label class="come-in" for="date">Дата заезда:</label>
+          <label class="come-in" for="date-first">Дата заезда:</label>
           <div>
             <input class="auth-form-field field" type="text" id="date-first" name="date-first" placeholder="27 апреля 2020">
             <p class="field-red-text">Мы не можем отправить вас в прошлое.</p>
           </div>
       </div>
       <div class="field-group">
-        <label class="come-out" for="date">Дата выезда:</label>
+        <label class="come-out" for="date-second">Дата выезда:</label>
         <div>
         <input class="auth-form-field field" type="text" id="date-second" name="date-second" placeholder="1 сентября 2021">
         <p class="field-black-text">На эти даты есть свободные номера. Пока есть.</p>
