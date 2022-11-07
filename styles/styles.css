@@ -52,6 +52,11 @@ a.undecorated-link {
   align-items: center;
   width: 1060px;
   margin: 0 auto;
+  height: 64px;
+}
+
+.logo{
+  z-index: 2;
 }
 
 .navigation-list {
@@ -71,7 +76,7 @@ a.undecorated-link {
 .navigation-link-current::after {
   position: absolute;
   right: 16px;
-  bottom: -1px;
+  bottom: 1px;
   left: 16px;
   height: 2px;
   width: 68px;
@@ -155,18 +160,25 @@ a.undecorated-link {
   text-align: center;
   font-size: 20px;
   color: inherit;
-  background-color: #FFFFFF;
   text-decoration: none;
+  margin-bottom: 9px;
 }
 
 .navigation-user .navigation-item:nth-child(2){
   background-position: center;
   margin-right: 20px;
+  padding-top: 5px;
+}
+
+.navigation-user .navigation-item:nth-child(1){
+  background-position: center;
+  padding-top: 5px;
 }
 
 .main-container{
   flex-grow: 1;
   padding-top: 51px;
+  margin-top: -6px;
 }
 
 .main-index {
@@ -177,6 +189,17 @@ a.undecorated-link {
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+}
+
+.main-index::after{
+  position: absolute;
+  bottom: 2615px;
+  left: 0px;
+  height: 57px;
+  width: 1200px;
+  background-image: url("/images/zigzag.svg");
+  content: "";
 }
 
 .page-container{
@@ -325,6 +348,57 @@ a.undecorated-link {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
+.advantages-title.house,
+.advantages-title.food,
+.advantages-title.gift{
+  margin-top: 79px;
+}
+
+.house{
+  position: relative;
+}
+
+.house:before{
+  position: absolute;
+  bottom: 62px;
+  left: 49px;
+  height: 72px;
+  width: 75px;
+  background-image: url("/images/advantages_house.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.food{
+  position: relative;
+}
+
+.food:before {
+  position: absolute;
+  bottom: 62px;
+  left: 49px;
+  height: 72px;
+  width: 75px;
+  background-image: url("/images/advantages_food.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.gift {
+  position: relative;
+}
+
+.gift:before{
+  position: absolute;
+  bottom: 62px;
+  left: 53px;
+  height: 72px;
+  width: 75px;
+  background-image: url("/images/advantages_gift.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
+
 .advantages-item-list{
   height: 384px;
   display:flex;
@@ -393,6 +467,7 @@ a.undecorated-link {
 
 .description-main.last{
   margin-left: auto;
+  margin-top: 96px;
 }
 
 .description-small.end {
@@ -437,6 +512,22 @@ a.undecorated-link {
   width: 447px;
   padding-left: 20px;
   font-size: 18px;
+  border-radius: 4px 0px 0px 4px;
+  border: 0;
+}
+
+.field:hover{
+  background-color: #E6E6E6;
+}
+
+.field:focus{
+  background-color: #E6E6E6;
+  border: 3px solid #83B3D3;
+}
+
+.field:active{
+  background-color: #E6E6E6;
+  border: 2px solid #000;
 }
 
 .newsletter-button {
@@ -451,6 +542,7 @@ a.undecorated-link {
   text-transform: uppercase;
   font-weight: 700;
   border: 0px;
+  border-radius: 0px 4px 4px 0px;
 }
 
 .button.newsletter-button:hover{
@@ -514,6 +606,10 @@ a.undecorated-link {
   color: #756157;
 }
 
+.number:focus{
+  color: #756157;
+}
+
 .number:active{
   color: rgba(117, 97, 87, 0.3);
 }
@@ -534,12 +630,12 @@ a.undecorated-link {
   fill: #756157;
 }
 
-.logo-html-academy:hover{
-  background-color: #756157;;
+.logo-html-academy > svg path:active{
+  fill: rgba(117, 97, 87, 0.3);
 }
 
-.logo-html-academy:active{
-  background-color: rgba(117, 97, 87, 0.3);
+.logo-html-academy > svg path:focus{
+  fill: #756157;
 }
 
 .button:hover {
@@ -553,6 +649,10 @@ a.undecorated-link {
 .button:active{
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled{
+  background-color: #E5E5E5;
 }
 
 .navigation-link > svg path:hover {
@@ -743,9 +843,11 @@ a.undecorated-link {
 }
 
 .tooltip{
-position: absolute;
+position: relative;
+padding: 5px;
 width: 26px;
 height: 26px;
+cursor: help;
 }
 
 .tooltip-toggle {
@@ -770,17 +872,19 @@ height: 26px;
   width: 256px;
   position: absolute;
   bottom: -130px;
-  left: -130px;
+  left: -119px;
   z-index: 1;
   display: none;
 }
 
-.tooltip-text:after{
+.tooltip-text:before{
   content: "";
   background-image: url("/images/arrow.svg");
   width: 19px;
   height: 9px;
-  position: absolute;
+  position: relative;
+  z-index: 2;
+  top: 500px;
 
 }
 
