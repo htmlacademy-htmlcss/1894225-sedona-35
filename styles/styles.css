@@ -28,6 +28,11 @@ body {
   line-height: 26px;
   color: #000000;
   background-color: #ffffff;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
