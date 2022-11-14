@@ -150,7 +150,7 @@ a.undecorated-link {
   margin-bottom: 5px;
 }
 
-.navigation-user .want a {
+.navigation-user > .want > a {
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
@@ -529,7 +529,7 @@ a.undecorated-link {
   padding-left: 20px;
   font-size: 18px;
   border-radius: 4px 0 0 4px;
-  border: 0;
+  border: 3px solid transparent;
   margin-left: -58px;
 }
 
@@ -544,7 +544,7 @@ a.undecorated-link {
 
 .field:active {
   background-color: #e6e6e6;
-  border: 2px solid #000000;
+  border: 3px solid #000000;
 }
 
 .newsletter-button {
@@ -609,15 +609,15 @@ a.undecorated-link {
   fill: #83b3d3;
 }
 
-.footer-social-link > svg path:hover {
+.footer-social-link > svg > path:hover {
   fill: #68a2ca;
 }
 
-.footer-social-link > svg path:focus {
+.footer-social-link > svg > path:focus {
   fill: #68a2ca;
 }
 
-.footer-social-link > svg path:active {
+.footer-social-link > svg > path:active {
   fill: rgba(104, 162, 202, 0.3);
 }
 
@@ -692,11 +692,11 @@ a.undecorated-link {
   background-color: #e5e5e5;
 }
 
-.navigation-link > svg path:hover {
+.navigation-link > svg > path:hover {
   fill: #68a2ca;
 }
 
-.navigation-link > svg path:active {
+.navigation-link > svg > path:active {
   fill: #82b3d3;
 }
 
@@ -793,7 +793,7 @@ a.undecorated-link {
 
 .date-form-field {
   padding: 0 19px;
-  background-image: url("../images/icons/modal-icon-date.svg");
+  background-image: url("../images/modal-icon-date.svg");
   background-repeat: no-repeat;
   background-position: right 17px center;
 }
@@ -1016,7 +1016,7 @@ a.undecorated-link {
 
 .tooltip-text::after {
   content: '';
-  background-image: url("../images/tooltip-arrow.svg");
+  background-image: url("../images/tooltip_arrow.svg");
   width: 19px;
   height: 9px;
   position: absolute;
